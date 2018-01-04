@@ -18,6 +18,44 @@ android {
     defaultConfig {
         consumerProguardFiles 'proguard-rules.pro'
     }
+    
+    
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        progaurd {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+    flavorDimensions "main"
+    productFlavors {
+
+        local {
+            dimension "main"
+        }
+
+        dev {
+            dimension "main"
+        }
+        stg {
+            dimension "main"
+        }
+        prod {
+            dimension "main"
+
+        }
+    }
 }
 
 dependencies {
