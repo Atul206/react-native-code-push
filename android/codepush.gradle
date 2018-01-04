@@ -76,7 +76,7 @@ gradle.projectsEvaluated {
             runBefore("bundle${targetName}JsAndAssets", recordFilesBeforeBundleCommand)
 
             // Make this task run right after the bundle task
-            def generateBundledResourcesHash = tasks.create(
+            /*def generateBundledResourcesHash = tasks.create(
                     name: "generateBundledResourcesHash${targetName}",
                     type: Exec) {
                 commandLine (*nodeExecutableAndArgs, "${nodeModulesPath}/react-native-code-push/scripts/generateBundledResourcesHash.js", resourcesDir, "$jsBundleDir/$bundleAssetName", jsBundleDir, resourcesMapTempFileName)
@@ -89,7 +89,7 @@ gradle.projectsEvaluated {
             runBefore("processArmeabi-v7a${targetName}Resources", generateBundledResourcesHash)
             runBefore("processX86${targetName}Resources", generateBundledResourcesHash)
             runBefore("processUniversal${targetName}Resources", generateBundledResourcesHash)
-            runBefore("process${targetName}Resources", generateBundledResourcesHash)
+            runBefore("process${targetName}Resources", generateBundledResourcesHash)*/
         }
     }
 }
